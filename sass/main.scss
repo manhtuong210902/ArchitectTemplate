@@ -1,0 +1,226 @@
+@import "../node_modules/bootstrap/scss/functions";
+//
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import '../node_modules/bootstrap/scss/grid';
+@import '../node_modules/bootstrap/scss/images';
+@import '../node_modules/bootstrap/scss/containers';
+@import '../node_modules/bootstrap/scss/nav';
+@import '../node_modules/bootstrap/scss/navbar';
+@import '../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+
+$primary: #333;
+$height-header: 54px;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+@mixin fontHeader {
+    font-family: Verdana, sans-serif;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+@mixin fontTitle {
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: $height-header;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    &__title{
+        @include fontHeader();
+        text-decoration: none;
+        padding: 8px 16px;
+        &:hover{
+            background-color: #d6d6d6;
+        }
+    }
+    &__list{
+        @include fontHeader();
+    }
+}
+
+.header__item{
+    padding: 8px 12px;
+    &:hover{
+        color: #333;
+        background-color: #d6d6d6
+    }
+}
+
+.header__link{
+    color: #333;
+    padding: 0;
+    &:hover{
+        color: #333;
+    }
+}
+
+.slider-img{
+    position: relative;
+    margin-top: $height-header;
+    padding: 0;
+}
+
+.slider-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1{
+        font-size: 30px;
+        line-height: 1.5;
+        letter-spacing: 4px;
+        white-space: nowrap;
+        .slider-title__logo{
+            font-weight: 700;
+            color: rgba(255,255,255,0.8);
+            background-color: rgba(0,0,0,0.8);
+            display: inline-block;
+            padding: 8px 16px;
+        }
+
+        .slider-title__text{
+            color: #fff;
+            font-weight: 100;
+        }
+
+    }
+}
+
+.project-title{
+    margin: 20px 0;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid #d6d6d6;
+    h3{
+        @include fontTitle();
+        font-weight: 400;
+        font-size: 22px;
+    }
+}
+
+.project-item{
+    position: relative;
+    margin-top: 18px;
+}
+
+.project-item__title{
+    position:absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 16px;
+    background-color: #000;
+    font-size: 13px;
+    color: #fff;
+}
+
+.about-content{
+    margin-bottom: 20px;
+    p{
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+.card{
+    margin-top: 18px;
+    h3{
+        @include fontTitle();
+        font-weight: 400;
+        font-size: 20px;
+        color: #333;
+        margin: 10px 0;
+    }
+
+    .card-position{
+        @include fontTitle();
+        font-weight: 500;
+        font-size: 15px;
+        color: #999;
+        font-weight: 100;
+        margin: 10px 0;
+    }
+
+    .card-des{
+        font-size: 13px;
+        margin: 16px 0;
+    }
+
+    button{
+        outline: none;
+        border: none;
+        background-color: #d6d6d6;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+}
+
+.contact-content{
+    p{
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+.contact-input{
+    padding: 8px;
+    margin-top: 18px;
+    width: 100%;
+    border: 1px solid #d6d6d6;
+}
+
+.contact-btn{
+    outline: none;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 16px;
+    margin: 24px 0;
+}
+
+.img-map{
+    margin: 5px 0;
+}
+
+#footer{
+    height: 84px;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        color: #fff;
+        font-size: 13px;
+        a{
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+
+
+
